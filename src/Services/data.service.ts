@@ -123,7 +123,7 @@ export class DataService {
       projectName: 'Landing Page',
       src: '/assets/projects/landingPage 1300.jpg',
       code: 'https://github.com/marcinMierzwa/Landing-Page/',
-      demo: 'https:/marcinmierzwa.github.io/Landing-Page/',
+      demo: 'https://marcinmierzwa.github.io/Landing-Page/',
     },
   ];
 
