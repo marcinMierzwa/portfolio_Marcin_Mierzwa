@@ -115,8 +115,8 @@ export class DataService {
       id: 4,
       projectName: 'Portfolio',
       src: '/assets/projects/portfolio 1300.jpg',
-      code: 'https://github.com/marcinMierzwa/Change-Variables-CSS-with-JS/',
-      demo: 'https://marcinmierzwa.github.io/Change-Variables-CSS-with-JS/',
+      code: 'https://github.com/marcinMierzwa/portfolio_Marcin_Mierzwa',
+      demo: 'https://portfolio-marcin-mierzwa.vercel.app/',
     },
     {
       id: 5,
