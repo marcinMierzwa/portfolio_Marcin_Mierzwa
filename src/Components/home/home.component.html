@@ -1,0 +1,41 @@
+<div class="h-full flex flex-col justify-around sm:justify-evenly sm:gap-y-6">
+  <div class="relative">
+    <h1
+      class="home-font-heading font-medium xl:font-semibold leading-tight tracking-tight px-6 sm:px-10 xl:px-12 2xl:px-18 lg:mt-4"
+    >
+      I create amazing experience
+    </h1>
+
+    <app-media class="absolute right-0 top-1/2 -translate-y-1/2 sm:top-[90%]" />
+  </div>
+
+  <p
+    class="home-text font-medium xl:font-semibold leading-relaxed text-yellow-100 px-6 sm:px-10 xl:px-12 2xl:px-18"
+  >
+    Web Developer <br /><span
+      class="block home-text leading-relaxed md:leading-loose xl:leading-10 w-10/12"
+      >focused on bulding responsive applications</span
+    >
+  </p>
+
+  <div class="flex flex-col gap-2 xl:gap-4 w-full">
+    <div
+      class="flex justify-between items-center px-6 sm:px-10 pe-6 xl:ps-12 2xl:ps-18 2xl:pe-12"
+    >
+      <p class="home-text-slider font-bold [word-spacing:3px]">My Work</p>
+
+      <a
+        routerLink="/work"
+        class="home-text-slider font-bold text-pink-600 cursor-pointer [word-spacing:3px] md:hidden"
+        >- View Work -</a
+      >
+      <a
+        class="home-button home-text-button-slider font-medium relative hidden md:inline-block tracking-wider cursor-pointer [word-spacing:2px] bg-pink-700 bg-opacity-85 border-2 border-gray-200 border-opacity-80 px-4 py-2 mb-5 rounded-xl duration-300"
+        routerLink="/work"
+        >View Work</a
+      >
+    </div>
+
+    <app-slider class="w-full "></app-slider>
+  </div>
+</div>

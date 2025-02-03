@@ -1,0 +1,149 @@
+<nav class="navigation flex justify-end items-center w-full px-2">
+  <!-- logo -->
+  <div class="navigation-logo z-30 opacity-85 me-auto xl:ms-3 mt-2">
+    <img
+      class="h-10 md:h-12 cursor-pointer ms-2"
+      routerLink="home"
+      src="/assets/images/logoMobile.png"
+      alt="logo"
+    />
+  </div>
+  <!-- desktop- -->
+  <div class="hidden sm:block z-30">
+    <ul
+      class="navigation-list w-full font-medium xl:text-lg tracking-wide flex justify-evenly"
+    >
+      <li
+        class="p-2 px-3"
+        [class.link-desktop]="!activeLinks[0].isActiveLink"
+        [class.link-desktop]="isActiveLinkOnInit"
+        routerLink="home"
+        [routerLinkActive]="['active-link']"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="getLinkName($event)"
+        (isActiveChange)="this.onRouterLinkActive($event)"
+      >
+        Home
+      </li>
+
+      <li
+        class="p-2 px-3"
+        [class.link-desktop]="!activeLinks[1].isActiveLink"
+        [class.link-desktop]="isActiveLinkOnInit"
+        routerLink="about"
+        [routerLinkActive]="['active-link']"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="getLinkName($event)"
+        (isActiveChange)="this.onRouterLinkActive($event)"
+      >
+        About Me
+      </li>
+
+      <li
+        class="p-2 px-3"
+        [class.link-desktop]="!activeLinks[2].isActiveLink"
+        [class.link-desktop]="isActiveLinkOnInit"
+        routerLink="skills"
+        [routerLinkActive]="'active-link'"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="getLinkName($event)"
+        (isActiveChange)="this.onRouterLinkActive($event)"
+      >
+        Skills
+      </li>
+
+      <li
+        class="p-2 px-3"
+        [class.link-desktop]="!activeLinks[3].isActiveLink"
+        [class.link-desktop]="isActiveLinkOnInit"
+        routerLink="work"
+        [routerLinkActive]="'active-link'"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="getLinkName($event)"
+        (isActiveChange)="this.onRouterLinkActive($event)"
+      >
+        Work
+      </li>
+
+      <li
+        class="p-2 px-3"
+        [class.link-desktop]="!activeLinks[4].isActiveLink"
+        routerLink="contact"
+        [routerLinkActive]="'active-link'"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="getLinkName($event)"
+        (isActiveChange)="this.onRouterLinkActive($event)"
+      >
+        Contact
+      </li>
+    </ul>
+  </div>
+  <div
+    class="navigation-icon-container cursor-pointer relative z-30 text-[#f3f3f3] sm:hidden hover:scale-125 duration-200 transition-all ease-in-out"
+    (click)="toggleMobileView()"
+    routerLink="home"
+  >
+    <!-- hamburger -->
+    @if(!isMobileView){
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.2"
+      stroke="currentColor"
+      class="navigation-icon w-10 h-10 md:hidden"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M5,8H19a1,1,0,0,0,0-2H5A1,1,0,0,0,5,8Zm16,3H3a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Zm-2,5H5a1,1,0,0,0,0,2H19a1,1,0,0,0,0-2Z"
+      />
+    </svg>
+    }
+    <!-- X-close -->
+    @if(isMobileView){
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.6"
+      stroke="currentColor"
+      class="navigation-icon w-12 h-12 md:hidden"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M6.99486 7.00636C6.60433 7.39689 6.60433 8.03005 6.99486 8.42058L10.58 12.0057L6.99486 15.5909C6.60433 15.9814 6.60433 16.6146 6.99486 17.0051C7.38538 17.3956 8.01855 17.3956 8.40907 17.0051L11.9942 13.4199L15.5794 17.0051C15.9699 17.3956 16.6031 17.3956 16.9936 17.0051C17.3841 16.6146 17.3841 15.9814 16.9936 15.5909L13.4084 12.0057L16.9936 8.42059C17.3841 8.03007 17.3841 7.3969 16.9936 7.00638C16.603 6.61585 15.9699 6.61585 15.5794 7.00638L11.9942 10.5915L8.40907 7.00636C8.01855 6.61584 7.38538 6.61584 6.99486 7.00636Z"
+      />
+    </svg>
+    }
+  </div>
+</nav>
+
+<!-- mobile Nav -->
+<div
+  class="z-20 fixed top-1/2 left-0 -translate-y-1/2 h-[80%] w-[73%] bg-[#111]/[87%] sm:hidden text-[1.5rem] rounded-e-[30px] font-bold duration-500 ease-in-out"
+  [ngClass]="isMobileView ? 'translate-x-[0]' : '-translate-x-[100%]'"
+>
+  <ul
+    class="navigation-mobile flex flex-col justify-center h-full ms-3"
+    (pointerleave)="toggleMobileView()"
+  >
+    <li class="my-2">
+      <a class="" routerLink="home">Home</a>
+    </li>
+    <li class="my-2">
+      <a class="" routerLink="about">About Me</a>
+    </li>
+    <li class="my-2">
+      <a class="" routerLink="skills">Skills</a>
+    </li>
+
+    <li class="my-2">
+      <a class="" routerLink="work">Work</a>
+    </li>
+    <li class="my-2">
+      <a class="" routerLink="contact">Contact</a>
+    </li>
+  </ul>
+</div>

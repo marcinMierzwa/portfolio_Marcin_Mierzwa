@@ -1,0 +1,20 @@
+
+swiper-container {
+    --swiper-pagination-color: rgb(232, 219, 219);
+    --swiper-pagination-bottom: -1.5rem;
+    --swiper-pagination-bullet-width: 20px;
+    --swiper-pagination-bullet-height: 6px;
+    --swiper-pagination-bullet-inactive-color: #000;
+    --swiper-pagination-bullet-inactive-opacity: 0.5;
+    --swiper-pagination-bullet-horizontal-gap: 8px;
+    --swiper-pagination-bullet-border-radius:0%;
+}
+
+@media (min-width:1024px) {
+    swiper-container {
+    --swiper-pagination-bottom: -3rem;
+    }
+}
+ 
+
+

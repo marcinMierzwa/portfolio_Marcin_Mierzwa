@@ -1,0 +1,40 @@
+.home-text {
+  font-size: clamp(1.1rem, 2.2vw, 2.5rem);
+}
+.home-text-slider {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+}
+.home-font-heading {
+  font-size: clamp(2.5rem, 3.5vw, 4rem);
+}
+.home-text-button-slider {
+  font-size: clamp(0.8rem, 1.2vw, 1.2rem);
+}
+
+
+.home-button {
+  box-shadow: 0 0 5px #db2777, 0 0 20px #24292f;
+  z-index: 1;
+  overflow: hidden;
+}
+.home-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10%;
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(45deg, #db2777, #ca4f86, #db72a2, #db2777);
+  opacity: 0.5;
+  transform: skewX(35deg);
+  transition: 1s;
+}
+.home-button:hover {
+  box-shadow: 0 0 10px #db2777, 0 0 20px #db2777, 0 0 20px #000;
+  opacity: 1;
+}
+.home-button:hover:before {
+  width: 120%;
+  transition: 1s;
+  z-index: -1;
+}

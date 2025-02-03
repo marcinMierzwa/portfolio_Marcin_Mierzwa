@@ -1,0 +1,18 @@
+<div
+  class="wrapper flex flex-col justify-between lg:w-[95vw] lg:mx-auto h-[100svh] sm:min-h-screen xl:py-2"
+>
+  <div
+    class="wrapper-background lg:w-[95vw] lg:mx-auto -z-10 absolute inset-0 bg-cover bg-center opacity-40"
+  ></div>
+
+  <app-navigation />
+
+  <div class="h-full sm:h-fit lg:h-full">
+
+    <router-outlet></router-outlet>
+    
+  </div>
+
+  <app-bottom-mobile-navi class="sm:hidden" />
+  <app-footer class="hidden sm:block sm:mt-4" />
+</div>

@@ -1,0 +1,13 @@
+.about-marty-image {
+  background-image: url("/assets/Marcin Mierzwa Compresed 500x500px no background.png");
+}
+.subpage-main-heading {
+  font-size: clamp(2.3rem, 4vw, 5rem);
+}
+
+.about-img {
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.8));
+}
+.about-text {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+}

@@ -1,0 +1,80 @@
+<div class="relative w-full">
+  <swiper-container
+    init="false"
+    class="swiper md:mx-20 lg:mx-40 xl:mx-60 2xl:mx-80 mx-auto relative"
+  >
+    @for(project of projects$ | async; track project.id){
+
+    <swiper-slide class="h-full flex flex-col gap-2">
+      <img
+        [src]="project.src"
+        [alt]="project.projectName"
+        class="h-[300px] object-cover object-top rounded-t-xl cursor-grab opacity-95 saturate-[0.9]"
+      />
+      <div class="flex uppercase">
+        <div
+          class="flex items-center justify-center shadow-md shadow-[#040c16] rounded-bl-xl w-1/2 text-center cursor-pointer"
+        >
+          <a
+            [href]="project.demo"
+            target="_blank"
+            class="w-full h-full flex items-center justify-center font-semibold xl:text-xl relative p-3 after:content-[''] after:bottom-[10px] after:left-1/2 after:-translate-x-1/2 after:absolute after:h-[2px] after:w-1/5 md:after:w-1/6 2xl:after:w-[60px] after:bg-pink-600 after:scale-x-0 hover:after:scale-x-100 after:duration-300"
+            >demo</a
+          >
+        </div>
+
+        <div
+          class="flex items-center justify-center shadow-md shadow-[#040c16] rounded-br-xl w-1/2 text-center cursor-pointer"
+        >
+          <a
+            [href]="project.code"
+            target="_blank"
+            class="w-full h-full flex items-center justify-center font-semibold xl:text-xl relative p-3 after:content-[''] after:bottom-[10px] after:left-1/2 after:-translate-x-1/2 after:absolute after:h-[2px] after:w-1/5 md:after:w-1/6 2xl:after:w-[60px] after:bg-pink-600 after:scale-x-0 hover:after:scale-x-100 after:duration-300"
+            >code</a
+          >
+        </div>
+      </div>
+    </swiper-slide>
+    }
+  </swiper-container>
+
+  <!-- --slider-buttons-- -->
+
+  <div
+    class="nav-slider w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 hidden lg:flex justify-between items-center lg:px-16 xl:px-24 2xl:px-40 group"
+  >
+    <svg
+      width="64"
+      height="64"
+      viewBox="0 0 64 64"
+      id="prev"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="opacity-60 group-hover:opacity-100 duration-500"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M32 2.79753e-06C14.3269 4.34256e-06 -4.34256e-06 14.3269 -2.79753e-06 32C-1.2525e-06 49.6731 14.3269 64 32 64C49.6731 64 64 49.6731 64 32C64 14.3269 49.6731 1.2525e-06 32 2.79753e-06ZM28.9334 24.3999C28.6667 24.1333 28.4 23.9999 28 23.9999C27.6 23.9999 27.3334 24.1333 27.0667 24.3999L20.4 31.0666L20.4 31.0667C20.2 31.2667 20.075 31.5041 20.025 31.751C19.9417 32.1624 20.0666 32.6 20.4 32.9333L27.0667 39.6C27.6 40.1333 28.4 40.1333 28.9333 39.6C29.4667 39.0667 29.4667 38.2667 28.9333 37.7333L24.5334 33.3334L42.7222 33.3334C43.4889 33.3334 44 32.8 44 32C44 31.2 43.4889 30.6667 42.7222 30.6667L24.5333 30.6667L28.9334 26.2666C29.4667 25.7333 29.4667 24.9333 28.9334 24.3999Z"
+        fill="white"
+      />
+    </svg>
+
+    <svg
+      width="64"
+      height="64"
+      viewBox="0 0 64 64"
+      id="next"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="opacity-60 group-hover:opacity-100 duration-500"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M32 64C49.6731 64 64 49.6731 64 32C64 14.3269 49.6731 0 32 0C14.3269 0 0 14.3269 0 32C0 49.6731 14.3269 64 32 64ZM35.0666 39.6001C35.3333 39.8667 35.6 40.0001 36 40.0001C36.4 40.0001 36.6666 39.8667 36.9333 39.6001L43.6 32.9334L43.6 32.9333C43.8 32.7333 43.925 32.4959 43.975 32.249C44.0583 31.8376 43.9334 31.4 43.6 31.0667L36.9333 24.4C36.4 23.8667 35.6 23.8667 35.0667 24.4C34.5333 24.9333 34.5333 25.7333 35.0667 26.2667L39.4666 30.6666H21.2778C20.5111 30.6666 20 31.2 20 32C20 32.8 20.5111 33.3333 21.2778 33.3333H39.4667L35.0666 37.7334C34.5333 38.2667 34.5333 39.0667 35.0666 39.6001Z"
+        fill="white"
+      />
+    </svg>
+  </div>
+</div>

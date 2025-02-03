@@ -1,0 +1,16 @@
+.slider-inner-slider {
+  animation: 90s slide infinite linear;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(calc(-100%));
+  }
+}
+
+.slider:hover .slider-inner-slider {
+  animation-play-state: paused;
+}

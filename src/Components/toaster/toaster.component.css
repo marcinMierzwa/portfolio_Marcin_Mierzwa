@@ -1,0 +1,123 @@
+/* --toaster sent-success-- */
+
+.toaster-visible {
+  width: 110%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 6px;
+  border-radius: 0.75rem;
+  outline: 1px solid #48ca93;
+  box-shadow: 0 5px 10px 0px rgb(27, 26, 26);
+  position: absolute;
+  right: 50%;
+  bottom: 25%;
+  background-color: rgba(255, 255, 255, 1);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(105, 235, 111, 1) 100%
+  );
+
+  transform: translateX(-200%);
+  transition: linear all 0.5s;
+  cursor: pointer;
+}
+.toaster-unvisible {
+  width: 110%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 6px;
+  border-radius: 0.75rem;
+  outline: 1px solid #48ca93;
+  box-shadow: 0 5px 10px 0px rgb(27, 26, 26);
+  position: absolute;
+  right: 50%;
+  bottom: 25%;
+  transform: translateX(50%);
+  background-color: rgba(255, 255, 255, 1);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(105, 235, 111, 1) 100%
+  );
+  transition: linear all 0.5s;
+  cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  .toaster-unvisible {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .toaster-unvisible {
+    width: 50%;
+  }
+}
+
+/* --toaster sent-error-- */
+
+.toaster-error-visible {
+  width: 110%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 6px;
+  border-radius: 0.75rem;
+  outline: 1px solid #48ca93;
+  box-shadow: 0 5px 10px 0px rgb(27, 26, 26);
+  position: absolute;
+  right: 50%;
+  bottom: 30%;
+  transform: translateX(-200%);
+  background-color: rgba(255, 255, 255, 1);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgb(235, 105, 105) 100%
+  );
+
+  transition: linear all 0.5s;
+  cursor: pointer;
+}
+.toaster-error-unvisible {
+  width: 110%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 6px;
+  border-radius: 0.75rem;
+  outline: 1px solid #ca4848;
+  box-shadow: 0 5px 10px 0px rgb(27, 26, 26);
+  position: absolute;
+  right: 50%;
+  bottom: 30%;
+  transform: translateX(50%);
+  background-color: rgba(255, 255, 255, 1);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgb(235, 105, 105) 100%
+  );
+  transition: linear all 0.5s;
+  cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  .toaster-errror-unvisible {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .toaster-error-unvisible {
+    width: 50%;
+  }
+}
