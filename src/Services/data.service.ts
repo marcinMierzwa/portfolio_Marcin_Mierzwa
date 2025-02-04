@@ -51,8 +51,8 @@ export class DataService {
     },
     {
       id: 6,
-      project: 'lotr quotes',
-      src: '/assets/work/LandingPage.png',
+      project: 'template component',
+      src: '/assets/work/template_component.png',
     },
   ];
 
@@ -125,6 +125,14 @@ export class DataService {
       code: 'https://github.com/marcinMierzwa/Landing-Page/',
       demo: 'https://marcinmierzwa.github.io/Landing-Page/',
     },
+    {
+      id: 6,
+      projectName: 'Template Component',
+      src: '/assets/projects/template component_1300.jpg',
+      code: 'https://github.com/marcinMierzwa/challenge-6-template-component-mentoring-program',
+      demo: 'https://challenge-6-template-component-mentoring-program.vercel.app/',
+    },
+
   ];
 
   private activeLinks: ActiveLink[] = [
